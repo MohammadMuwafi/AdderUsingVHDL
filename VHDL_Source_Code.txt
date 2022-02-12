@@ -1,0 +1,579 @@
+								  -- {NOT GATE} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY notGate IS
+	PORT(in1: IN std_logic;													      
+	out1: OUT std_logic);
+END notGate;
+
+ARCHITECTURE structural OF notGate IS
+BEGIN																		 
+	out1 <= (NOT in1) AFTER 3 ns;
+END structural;
+--***********************************--
+
+-- {NAND GATE} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY nandGate IS 
+	PORT(in1, in2: IN std_logic;
+	out1: OUT std_logic);
+END nandGate;
+
+ARCHITECTURE structural OF nandGate IS
+BEGIN
+	out1 <= (in1 NAND in2) AFTER 6 ns;
+END structural;
+--***********************************--
+
+-- {NOR GATE} -- 
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY norGate IS 
+	PORT(in1, in2: IN std_logic;
+	out1: OUT std_logic);
+END norGate;
+
+ARCHITECTURE structural OF norGate IS
+BEGIN
+	out1 <= (in1 NOR in2) AFTER 6 ns;
+END structural; 
+--***********************************--
+
+-- {AND GATE} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY andGate IS 											   
+	PORT(in1, in2: IN std_logic;
+	out1: OUT std_logic);
+END andGate;
+
+ARCHITECTURE structural OF andGate IS
+BEGIN
+	out1 <= (in1 AND in2) AFTER 8 ns;
+END structural;
+--***********************************--
+
+-- {AND GATE WITH 3 INPUTS} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY andGate3 IS 											   
+	PORT(in1, in2, in3: IN std_logic;
+	out1: OUT std_logic);
+END andGate3;
+
+ARCHITECTURE structural OF andGate3 IS
+BEGIN
+	out1 <= (in1 AND in2 AND in3) AFTER 8 ns;
+END structural;		  
+--***********************************--
+
+
+-- {AND GATE WITH 4 INPUTS} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY andGate4 IS 											   
+	PORT(in1, in2, in3, in4: IN std_logic;
+	out1: OUT std_logic);
+END andGate4;
+
+ARCHITECTURE structural OF andGate4 IS
+BEGIN
+	out1 <= (in1 AND in2 AND in3 AND in4) AFTER 8 ns;
+END structural;
+--***********************************--
+
+-- {AND GATE WITH 5 INPUTS} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY andGate5 IS 											   
+	PORT(in1, in2, in3, in4, in5: IN std_logic;
+	out1: OUT std_logic);
+END andGate5;
+
+ARCHITECTURE structural OF andGate5 IS
+BEGIN
+	out1 <= (in1 AND in2 AND in3 AND in4 AND in5) AFTER 8 ns;
+END structural;
+--***********************************--
+
+
+-- {OR GATE} --	
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY orGate IS 
+	PORT(in1, in2: IN std_logic;
+	out1: OUT std_logic);
+END orGate; 
+
+ARCHITECTURE structural OF orGate IS
+BEGIN
+	out1 <= (in1 OR in2) AFTER 8 ns;
+END structural;
+--***********************************--
+
+
+-- {OR GATE WITH 3 INPUTS} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY orGate3 IS 
+	PORT(in1, in2, in3: IN std_logic;
+	out1: OUT std_logic);
+END orGate3;
+
+ARCHITECTURE structural OF orGate3 IS
+BEGIN
+	out1 <= (in1 OR in2 OR in3) AFTER 8 ns;
+END structural;
+--***********************************--
+
+
+-- {OR GATE WITH 4 INPUTS} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY orGate4 IS 
+	PORT(in1, in2, in3, in4: IN std_logic;
+	out1: OUT std_logic);
+END orGate4;
+
+ARCHITECTURE structural OF orGate4 IS
+BEGIN
+	out1 <= (in1 OR in2 OR in3 OR in4) AFTER 8 ns;
+END structural;
+--***********************************--
+
+
+-- {OR GATE WITH 5 INPUTS} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY orGate5 IS 
+	PORT(in1, in2, in3, in4, in5: IN std_logic;
+	out1: OUT std_logic);
+END orGate5;
+
+ARCHITECTURE structural OF orGate5 IS
+BEGIN
+	out1 <= (in1 OR in2 OR in3 OR in4 OR in5) AFTER 8 ns;
+END structural;
+--***********************************--
+
+
+-- {XNOR GATE} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY xnorGate IS 
+	PORT(in1, in2: IN std_logic;
+	out1: OUT std_logic);
+END xnorGate;
+
+ARCHITECTURE structural OF xnorGate IS
+BEGIN
+	out1 <= (in1 XNOR in2) AFTER 10 ns;
+END structural;
+--***********************************--
+
+
+
+-- {XOR GATE} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY xorGate IS 
+	PORT(in1, in2: IN std_logic;
+	out1: OUT std_logic);		  
+END xorGate;
+
+ARCHITECTURE structural OF xorGate IS
+BEGIN
+	out1 <= (in1 XOR in2) AFTER 12 ns;
+END structural;
+--***********************************--
+
+
+-- {XOR GATE WITH 3 INPUTS} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY xorGate3 IS 
+	PORT(in1, in2, in3: IN std_logic;
+	out1: OUT std_logic);
+END xorGate3;
+
+ARCHITECTURE structural OF xorGate3 IS
+BEGIN
+	out1 <= (in1 XOR in2 XOR in3) AFTER 12 ns;
+END structural;
+--***********************************--
+
+
+-- {XOR GATE WITH 4 INPUTS} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY xorGate4 IS 
+	PORT(in1, in2, in3, in4: IN std_logic;
+	out1: OUT std_logic);
+END xorGate4;
+
+ARCHITECTURE structural OF xorGate4 IS
+BEGIN
+	out1 <= (in1 XOR in2 XOR in3 XOR in4) AFTER 12 ns;
+END structural;
+--***********************************--
+
+
+-- {FULL ADDER} -- 
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY fulladder IS 
+	PORT(a, b, cin: IN std_logic;
+	sum, cout: OUT std_logic);
+END fulladder;
+
+ARCHITECTURE structural OF fulladder IS
+SIGNAL var1, var2, var3: std_logic;
+BEGIN	 
+	-- var1 = (a and b)
+	-- var2 = (a and cin)
+	-- var3 = (b and cin) 	   
+	label1: ENTITY work.xorGate3(structural) PORT MAP(a, b, cin, sum);	
+	label2: ENTITY work.andGate(structural) PORT MAP(a, b, var1); 
+	label3: ENTITY work.andGate(structural) PORT MAP(a, cin, var2); 
+	label4: ENTITY work.andGate(structural) PORT MAP(b, cin, var3);
+	label5: ENTITY work.orGate3(structural) PORT MAP(var1, var2, var3, cout);	
+END structural; 
+--***********************************--
+
+
+-- {RIPPLE ADDER} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY ripple_adder IS
+	PORT(cin: IN std_logic;
+	a, b: IN std_logic_vector(3 DOWNTO 0);
+	sum: OUT std_logic_vector(3 DOWNTO 0);
+	cout: OUT std_logic);
+END ripple_adder; 
+
+ARCHITECTURE structural OF ripple_adder IS
+SIGNAL carry: std_logic_vector(4 DOWNTO 0);	  
+BEGIN	
+	carry(0) <= cin;
+	cout <= carry(4); 
+												 
+	label1: FOR i IN 0 TO 3 GENERATE
+		fullAdderi: ENTITY work.fulladder(structural) PORT MAP(a(i), b(i), carry(i), sum(i), carry(i + 1));
+	END GENERATE;
+END structural; 
+--***********************************--
+
+
+-- {ONE BIT CARRY LOOK AHEAD ADDER} --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY cla_one_bit IS -- cla_one_bit means one bit carry look ahead adder.
+	PORT(a, b, cin: IN std_logic;
+	sum, p, g: OUT std_logic);
+END cla_one_bit; 
+
+ARCHITECTURE structural OF cla_one_bit IS
+SIGNAL var1: std_logic;
+BEGIN 				
+	-- (signal var1 = p)
+	
+	p <= var1;		
+	-- g = (a and b)
+	label1: ENTITY work.andGate(structural) PORT MAP(a, b, g);
+	
+	-- var1 = (a xor b)	
+	label2: ENTITY work.xorGate(structural) PORT MAP(a, b, var1);
+	
+	-- sum = (var1 xor cin)
+	label3: ENTITY work.xorGate(structural) PORT MAP(var1, cin, sum);
+END structural;
+--***********************************--
+
+
+-- {4 BITS CARRY LOOK AHEAD ADDER} -- 
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY cla_4bit IS
+	PORT(cin: IN std_logic;
+	a, b: IN std_logic_vector(3 DOWNTO 0);
+	sum: OUT std_logic_vector(3 DOWNTO 0);
+	cout: OUT std_logic);
+END cla_4bit; 
+
+ARCHITECTURE structural OF cla_4bit IS
+SIGNAL carry: std_logic_vector(4 DOWNTO 0);	 
+SIGNAL g, p: std_logic_vector(3 DOWNTO 0); 
+SIGNAL p0cin: std_logic; -- terms of carry(0) equation.
+SIGNAL p1g0, p1p0cin: std_logic; -- terms of carry(1) equation.
+SIGNAL p2g1, p2p1g0, p2p1p0cin: std_logic; -- terms of carry(2) equation.
+SIGNAL p3g2, p3p2g1, p3p2p1g0, p3p2p1p0cin: std_logic; -- terms of carry(3) equation.
+BEGIN
+	-- for example "p0cin" means (p(0) and cin)
+	-- for example "p3p2p1g0" means (p(3) and p(2) and p(1) and g(0))
+	-- and the other terms are defined by the same way.
+	
+	-- carry(1) <= g(0) or (p(0) and cin);
+	label0: ENTITY work.andGate(structural) PORT MAP(p(0), cin, p0cin);
+	label1: ENTITY work.orGate(structural) PORT MAP(g(0), p0cin, carry(1)); 
+	-- carry(2) <= g(1) or (p(1) and g(0)) or (p(1) and p(0) and cin);
+	label2: ENTITY work.andGate(structural) PORT MAP(p(1), g(0), p1g0);
+	label3: ENTITY work.andGate3(structural) PORT MAP(p(1), p(0), cin, p1p0cin);
+	label4: ENTITY work.orGate3(structural) PORT MAP(g(1), p1g0, p1p0cin, carry(2));
+	-- carry(3) <= g(2) or (p(2) and g(1)) or (p(2) and p(1) and g(0)) or (p(2) or p(1) or p(0) or cin); 
+	label5: ENTITY work.andGate(structural) PORT MAP(p(2), g(1), p2g1);
+	label6: ENTITY work.andGate3(structural) PORT MAP(p(2), p(1), g(0), p2p1g0);
+	label7: ENTITY work.andGate4(structural) PORT MAP(p(2), p(1), p(0), cin, p2p1p0cin);
+	label8: ENTITY work.orGate4(structural) PORT MAP(g(2), p2g1, p2p1g0, p2p1p0cin, carry(3));	
+	-- carry(4) <= g(3) or (p(3) and g(2)) or (p(3) and p(2) and g(1)) or (p(3) and p(2) and p(1) and g(0)) or (p(3) and p(2) and p(1) and p(0) and cin);
+	label9: ENTITY work.andGate(structural) PORT MAP(p(3), g(2), p3g2);
+	label10: ENTITY work.andGate3(structural) PORT MAP(p(3), p(2), g(1), p3p2g1);
+	label11: ENTITY work.andGate4(structural) PORT MAP(p(3), p(2), p(1), g(0), p3p2p1g0);
+	label12: ENTITY work.andGate5(structural) PORT MAP(p(3), p(2), p(1), p(0), cin, p3p2p1p0cin);
+	label13: ENTITY work.orGate5(structural) PORT MAP(g(3), p3g2, p3p2g1, p3p2p1g0, p3p2p1p0cin, carry(4));
+	
+	carry(0) <= cin;
+	cout <= carry(4); 
+	
+	gen: FOR i IN 0 TO 3 GENERATE
+		cla_one_bit_i: ENTITY work.cla_one_bit(structural) PORT MAP(a(i), b(i), carry(i), sum(i), p(i), g(i));
+	END GENERATE;	
+END structural;
+--***********************************--
+
+
+ -- {1 digit BCD adder}
+LIBRARY ieee;             
+USE ieee.std_logic_1164.ALL; 
+
+ENTITY bcdAdder IS
+	PORT(a, b: IN std_logic_vector(3 DOWNTO 0);
+	cin: IN std_logic;
+	sum: OUT std_logic_vector(3 DOWNTO 0);
+	cout: OUT std_logic);
+END bcdAdder;
+
+ARCHITECTURE usingRipple OF bcdAdder IS								 
+SIGNAL tempSum, concat: std_logic_vector(3 DOWNTO 0);  
+SIGNAL tempCout, s3s2, s3s1: std_logic;
+SIGNAL tempConcat: std_logic;
+BEGIN
+	label0: ENTITY work.andGate(structural) PORT MAP(tempSum(3), tempSum(2), s3s2); -- s3 and s2   	
+	label1: ENTITY work.andGate(structural) PORT MAP(tempSum(3), tempSum(1), s3s1); -- s3 and s1
+	label3: ENTITY work.orGate3(structural) PORT MAP(tempCout, s3s2, s3s1, tempConcat); -- tempCout + s3.s2 + s3.s1
+	cout <= tempConcat;
+	concat <= '0' & tempConcat & tempConcat & '0'; 
+	-- the BCD adder is bulit using ripple adder
+	adder1: ENTITY work.ripple_adder(structural) PORT MAP(cin, a, b, tempSum, tempCout); 		
+	adder2: ENTITY work.ripple_adder(structural) PORT MAP('0', tempSum, concat, sum, OPEN);
+END usingRipple;
+--***********************************--
+
+
+ARCHITECTURE usingCLA OF bcdAdder IS								 
+SIGNAL tempSum, concat: std_logic_vector(3 DOWNTO 0);  
+SIGNAL tempCout, s3s2, s3s1: std_logic;
+SIGNAL tempConcat: std_logic;
+BEGIN
+	label0: ENTITY work.andGate(structural) PORT MAP(tempSum(3), tempSum(2), s3s2); -- s3 and s2   	
+	label1: ENTITY work.andGate(structural) PORT MAP(tempSum(3), tempSum(1), s3s1); -- s3 and s1
+	label3: ENTITY work.orGate3(structural) PORT MAP(tempCout, s3s2, s3s1, tempConcat); -- tempCout + s3.s2 + s3.s1
+	cout <= tempConcat;
+	concat <= '0' & tempConcat & tempConcat & '0'; 
+	-- the BCD adder is bulit using CLA adder
+	adder1: ENTITY work.cla_4bit(structural) PORT MAP(cin, a, b, tempSum, tempCout); 		
+	adder2: ENTITY work.cla_4bit(structural) PORT MAP('0', tempSum, concat, sum, OPEN);
+END usingCLA;
+--***********************************--
+
+
+-- {the Whole Circuit}     
+LIBRARY ieee;               
+USE ieee.std_logic_1164.ALL; 
+USE ieee.std_logic_unsigned.ALL;
+
+ENTITY circuit IS
+	PORT(cin: IN std_logic:='0';
+	a1, a2, b1, b2: IN std_logic_vector(3 DOWNTO 0);
+	sum1, sum2: OUT std_logic_vector(3 DOWNTO 0);
+	cout: OUT std_logic);
+END circuit;
+--***********************************--
+
+
+ARCHITECTURE structuralRipple OF circuit IS
+SIGNAL cp11, cp12, cp21, cp22, csum1, csum2: std_logic_vector(3 DOWNTO 0):="0000";
+SIGNAL clk: std_logic:='0';
+SIGNAL temp: std_logic:='0';	  
+BEGIN	 
+	-- flipped the clk value after 60 ns
+	clk <= NOT clk AFTER 60ns;		   
+	
+	bcdadder1: ENTITY work.bcdAdder(usingRipple) PORT MAP(cp12, cp22, '0', csum2, temp);	
+	bcdadder2: ENTITY work.bcdAdder(usingRipple) PORT MAP(cp11, cp21, temp, csum1, cout);
+	
+	-- to make the registers
+	PROCESS(clk)
+	BEGIN  		
+		IF (rising_edge(clk)) THEN
+			cp11 <= a1;
+			cp12 <= a2;
+			cp21 <= b1;
+			cp22 <= b2;
+			sum1 <= csum1;
+			sum2 <= csum2;
+		END IF;	
+	END PROCESS;
+	
+END structuralRipple;
+--***********************************--
+
+
+ARCHITECTURE structuralCLA OF circuit IS
+SIGNAL cp11, cp12, cp21, cp22, csum1, csum2: std_logic_vector(3 DOWNTO 0):="0000";
+SIGNAL clk: std_logic:='0';
+SIGNAL temp: std_logic:='0';	  
+BEGIN
+	-- flipped the clk value after 50 ns
+	clk <= NOT clk AFTER 50ns;		  
+	
+	bcdadder1: ENTITY work.bcdAdder(usingCLA) PORT MAP(cp12, cp22, '0', csum2, temp);	
+	bcdadder2: ENTITY work.bcdAdder(usingCLA) PORT MAP(cp11, cp21, temp, csum1, cout);
+	
+	-- to make the registers
+	PROCESS(clk)
+	BEGIN  
+		IF (rising_edge(clk)) THEN
+			cp11 <= a1;
+			cp12 <= a2;
+			cp21 <= b1;
+			cp22 <= b2;
+			sum1 <= csum1;
+			sum2 <= csum2;
+		END IF;	
+	END PROCESS;
+END structuralCLA;
+--***********************************--	
+
+
+-- to get the expected value.
+ARCHITECTURE behavioral OF circuit IS  
+SIGNAL sum_a1b1, sum_a2b2: std_logic_vector(4 DOWNTO 0):="00000"; 
+SIGNAL sum_a1b1_new, sum_a2b2_new: std_logic_vector(4 DOWNTO 0):="00000"; 
+BEGIN		
+	-- VERY IMPORTANT NOTE: The final result = cout & sum1 & sum2
+		
+	sum_a2b2 <= ('0' & a2) + ('0' & b2) + ("0000" & cin);
+	
+	-- add 6 to the result if it was greater than 9
+	sum_a2b2_new <= sum_a2b2 WHEN sum_a2b2 < "01010" ELSE sum_a2b2 + ("00110");
+	
+	sum_a1b1 <= ('0' & a1) + ('0' & b1) + ("0000" & sum_a2b2_new(4));
+	
+	-- add 6 to the result if it was greater than 9
+	sum_a1b1_new <= sum_a1b1 WHEN sum_a1b1 < "01010" ELSE sum_a1b1 + ("00110");
+	
+	sum2 <= sum_a2b2_new(3 DOWNTO 0);  
+	sum1 <= sum_a1b1_new(3 DOWNTO 0); 
+	cout <= sum_a1b1_new(4); 												
+END behavioral;
+--***********************************--
+
+
+-- {Test Bench Of The Whole Circuit} --
+LIBRARY ieee;               
+USE ieee.std_logic_1164.ALL; 
+USE ieee.std_logic_unsigned.ALL;
+USE ieee.std_logic_arith.ALL; 
+USE STD.textio.ALL;
+USE ieee.std_logic_textio.ALL;
+
+ENTITY circuit_test IS
+END circuit_test;
+
+ARCHITECTURE testGenerator OF circuit_test IS
+SIGNAL a1, a2, b1, b2: std_logic_vector(3 DOWNTO 0); 
+SIGNAL sum11, sum12, sum21, sum22, sum31, sum32: std_logic_vector(3 DOWNTO 0); 
+SIGNAL resultBehavioral, resultRipple, resultCLA: std_logic_vector(8 DOWNTO 0):="000000000"; 
+SIGNAL cout1, cout2, cout3: std_logic; 						 
+BEGIN	 																													 
+	circuit_behavioral: ENTITY work.circuit(behavioral) PORT MAP('0', a1, a2, b1, b2, sum11, sum12, cout1);
+	circuit_structural_usingRipple: ENTITY work.circuit(structuralRipple) PORT MAP('0', a1, a2, b1, b2, sum21, sum22, cout2);
+	circuit_structural_usingCLA: ENTITY work.circuit(structuralCLA) PORT MAP('0', a1, a2, b1, b2, sum31, sum32, cout3);
+
+	PROCESS
+	TYPE strFile IS FILE OF string;
+	FILE outputFile : strFile;
+	VARIABLE fileStatus: FILE_OPEN_STATUS;
+	BEGIN	
+		FOR i IN 0 TO 9 LOOP
+			a1 <= conv_std_logic_vector(i, 4);
+			FOR j IN 0 TO 9 LOOP 	 
+				b1 <= conv_std_logic_vector(j, 4);
+				FOR k IN 0 TO 9 LOOP  				    
+					a2 <= conv_std_logic_vector(k, 4);
+					FOR q IN 0 TO 9 LOOP			
+						b2 <= conv_std_logic_vector(q, 4);
+						-- i used the WAIT statement to make the three results parallel to each others
+						WAIT FOR 80ns;
+						
+						resultBehavioral <= (cout1 & sum11 & sum12);
+						WAIT FOR 20ns;	
+										
+						resultCLA <= (cout3 & sum31 & sum32); 
+						WAIT FOR 200ns;
+						
+						resultRipple <= (cout2 & sum21 & sum22);					
+						WAIT FOR 360ns;
+						
+						ASSERT resultBehavioral = resultRipple
+						REPORT "wrong answer in Rippleadder"
+						SEVERITY warning;
+						
+						ASSERT resultBehavioral = resultCLA
+						REPORT "wrong answer in CLAadder"
+						SEVERITY warning;
+						
+						ASSERT resultRipple = resultCLA
+						REPORT "wrong !!!"
+						SEVERITY error;											
+						
+						-- write in the file that name is "output" if the result is wrong.
+						file_open(fileStatus, output, "output.txt", write_mode);						
+						IF (resultBehavioral /= resultRipple) THEN
+							write(outputFile, "  [Wrong answer in Ripple Adder]  ");	 
+						END IF;	
+						
+						IF (resultBehavioral /= resultCLA) THEN
+							write(outputFile, "  [Wrong answer in CLA Adder]  "); 
+			
+						END IF;	
+					END LOOP;	  
+				END LOOP;
+			END LOOP;
+		END LOOP;				
+		file_close(outputFile);
+		WAIT;
+	END PROCESS;
+END testGenerator; 
+		
+--**********************************--
